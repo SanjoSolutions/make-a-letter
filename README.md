@@ -12,7 +12,7 @@ Create German letters from a template which follows DIN 5008 norms as local DOCX
 - Fills distinct sender, recipient, reference, contact and signature fields.
 - Removes unused optional fields, including their empty paragraphs.
 - Uses bundled DOCX and ODT templates for local files.
-- Supports native Google Docs copies through a connected Google Drive integration.
+- Supports native Google Docs copies through a separately installed and connected Google Drive plugin.
 - Omits numbering for one-page letters and retains automatic “Seite x von y” fields for multipage letters after measuring actual pagination.
 
 The template is based on DIN 5008 norms. It is not DIN certification or a guarantee that an arbitrary finished letter conforms to the standard.
@@ -29,9 +29,9 @@ Example prompts:
 
 > Übertrage meinen Briefentwurf in die Vorlage und prüfe die Platzhalter und das Layout.
 
-Google Docs requires a connected Google Drive integration and access to the source template. Local DOCX/ODT creation does not require Google Drive. PDF and RTF need an available converter or an authorized Google Drive export. Plain text has no page geometry.
+Google Docs requires a separately installed and connected Google Drive plugin and access to the source template. No Google Drive integration or MCP server is bundled. Local DOCX/ODT creation does not require Google Drive. PDF and RTF need an available converter or an authorized Google Drive export. Plain text has no page geometry.
 
-The public marketplace submission is being prepared. This repository is source code, not evidence of marketplace approval. Its `.app.json` binding is retained for compatible private/local hosts; this source tree is **not** a ready-to-upload public marketplace archive.
+The public marketplace submission is being prepared. This repository is source code, not evidence of marketplace approval. Version 0.2.8 is prepared as a skills-only marketplace package with no `.app.json` binding. Publisher verification, portal checks and approval remain separate requirements.
 
 ## Run the local helpers
 

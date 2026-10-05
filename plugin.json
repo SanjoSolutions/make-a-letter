@@ -1,31 +1,38 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "make-a-letter",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Create German letters from a template which follows DIN 5008 norms as local DOCX, ODT or exported PDF, RTF and text, or as a Google Doc.",
   "author": {
     "name": "Jonas Aschenbrenner"
   },
   "extensions": {
     "com.openai": {
-      "apps": "./.app.json",
       "interface": {
         "displayName": "Make a letter",
         "shortDescription": "Letters in Word, ODT and PDF",
-        "longDescription": "Draft a German letter from notes and fill an optimized template with distinct sender, recipient, contact and signatory fields. Bundled Word and OpenDocument templates support local creation without Google Drive in hosts with file execution. PDF and RTF require an available converter or authorized Google Drive export; plain text is also supported. Google Docs uses a native copy of the template. Preserves the original template and checks missing fields, sample content and layout. Template-based formatting is not DIN certification.",
-        "developerName": "Jonas Aschenbrenner",
+        "longDescription": "Create German letters from notes or an existing draft using a template which follows DIN 5008 norms. Fill sender, recipient, contact and signature fields, omit unused optional fields, and check the completed layout. Create local DOCX or ODT files, export PDF or RTF with an available converter, or produce plain text. Google Docs support uses the separately installed and connected Google Drive plugin; no Google Drive connection is bundled. Completed one-page letters omit page numbering; longer letters use automatic page numbers and totals. Local file generation requires execution tools, and pagination verification requires a document renderer. Template-based formatting is not DIN certification.",
         "category": "Productivity",
-        "logo": "./assets/icon.svg",
-        "composerIcon": "./assets/icon.svg",
         "defaultPrompt": [
           "Hilf mir, einen Brief mit der DIN-5008-Vorlage zu erstellen. Frage nach den noch fehlenden Angaben.",
           "Formuliere aus meinen Stichpunkten einen sachlichen Brief und erstelle ihn als Google Doc mit der DIN-5008-Vorlage.",
           "Übertrage meinen Briefentwurf in die DIN-5008-Vorlage und prüfe die Platzhalter und das Layout."
         ],
+        "logo": "./assets/icon.png",
+        "composerIcon": "./assets/icon.png",
         "websiteURL": "https://make-a-letter.jonas-aschenbrenner.chatgpt.site/",
         "supportURL": "https://make-a-letter.jonas-aschenbrenner.chatgpt.site/support/",
         "privacyPolicyURL": "https://make-a-letter.jonas-aschenbrenner.chatgpt.site/privacy/",
-        "termsOfServiceURL": "https://make-a-letter.jonas-aschenbrenner.chatgpt.site/terms/"
+        "termsOfServiceURL": "https://make-a-letter.jonas-aschenbrenner.chatgpt.site/terms/",
+        "developerName": "Jonas Aschenbrenner"
+      },
+      "review": {
+        "commerce": false,
+        "commerce_description": "No payments or purchases are involved."
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Prepare the skills-only marketplace edition. Google Docs uses a separately installed and connected Google Drive plugin. Includes corrected local templates, optional-field cleanup and page-count-based numbering."
       }
     }
   }
